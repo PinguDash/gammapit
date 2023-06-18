@@ -1,0 +1,5 @@
+command /oof:
+	trigger:
+		wait 1 tick
+		remove 500 from player's health
+		send "&c&lDEATH"
