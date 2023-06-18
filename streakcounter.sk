@@ -1,13 +1,8 @@
-on chat:
-  add 1 to {killstreak}
-
-every second:
-  loop all players:
-    send {killstreak} to loop-player
-
-
 on death of a player:
   attacker is a player                 # only run beneath code if killer is a player
   add 1 to {killstreak::%uuid of attacker%}  # add 1 to kills for killer
   set {killstreak::%uuid of victim%} to 0    # reset kills for killed player
   send "&6%{killstreak::%uuid of attacker%}% killstreak!" to attacker
+  play sound "ANVIL_BREAK" at volume 0.4 at pitch 1 to attacker # goofy killsound
+  if {killstreak::%uuid of attacker%} is 50: # overdrive preset
+    send "hi" to attacker # just debugging
