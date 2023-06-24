@@ -1,0 +1,4 @@
+command /clearplayerxp:
+	trigger:
+		wait 20 ticks
+		set {xp::%uuid of player%} to 0
