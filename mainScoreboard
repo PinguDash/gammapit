@@ -1,0 +1,6 @@
+on join:
+  while player is online:
+    set title of player's scoreboard to "GammaPit"
+    set line 1 of player's scoreboard to "XP: %{xp::%uuid of player%}%"
+    set line 2 of player's scoreboard to "Killstreak: %{killstreak::%uuid of player%}%"
+    wait 1 second
