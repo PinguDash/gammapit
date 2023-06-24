@@ -1,0 +1,2 @@
+on chat:
+  set chat format to "&3[%{xp::%uuid of player%}%] &r&b%player's name%&r: %colored message%"
